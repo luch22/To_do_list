@@ -19,6 +19,7 @@ export function displayHTML(listToDo) {
       checkBox.checked = toDo.accomplished;
       let deleteToDo = document.createElement("div");
       deleteToDo.classList = "toDo__delete";
+      deleteToDo.innerHTML = "<span>SUPPRIMER</span>";
       sectionToDo.append(deleteToDo);
       if (!toDo.accomplished) {
         deleteToDo.style.visibility = "hidden";

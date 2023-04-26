@@ -1,4 +1,7 @@
 section.toDo {
+  scale: 0.8;
+  // background-color: rgba(250, 250, 250, 0.16);
+  font-size: 1em;
   margin: 10px;
   border: black 3px solid;
   padding: 5px;
@@ -10,8 +13,15 @@ section.toDo {
   grid-template-areas:
     "ti ti ti ti"
     "txt txt txt txt"
-    "del ch da da";
+    "del del ch ch "
+    "da da da da";
   min-height: 260px;
+  &:hover {
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+    scale: 1;
+    transition: all 500ms;
+  }
   .toDo__title {
     grid-area: ti;
     color: red;
@@ -23,9 +33,21 @@ section.toDo {
     grid-area: da;
   }
   #accomplish {
+    height: 20px;
+    width: 20px;
+    &:checked {
+      background-color: red;
+    }
     grid-area: ch;
   }
   .toDo__delete {
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    color: #fff;
+
+    font-size: xx-small;
     background-color: red;
     height: 50px;
     width: 50px;
