@@ -3,12 +3,12 @@ header {
   height: -moz-fit-content;
   height: fit-content;
 }
-header div {
+header form {
   width: 50%;
   display: flex;
   flex-direction: column;
 }
-header div :nth-child(1n) {
+header form :nth-child(1n) {
   margin: 10px;
 }
 

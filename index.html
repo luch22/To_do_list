@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <script defer type="module" src="assets/js/script.js"></script>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div>
-            <label for="titre">Titre</label>
-            <input type="text" id="titre" name="titre" required>
+      <form class>
+        <label for="titre">Titre</label>
+        <input type="text" id="titre" name="titre" required />
 
-            <label for="date">Date</label>
-            <input type="date" id="date" name="date" value="" required>
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" value="" required />
 
-            <label for="toDo">ToDo</label>
-            <textarea id="toDo" name="toDo" rows="4" cols="25"></textarea>
+        <label for="toDo">ToDo</label>
+        <textarea id="toDo" name="toDo" rows="4" cols="25"></textarea>
 
-            <button type="submit" id="toDo__add">Submit</button>
-        </div>
+        <button type="submit" id="toDo__add">Submit</button>
+      </form>
     </header>
     <main></main>
     <footer></footer>
-</body>
-
+  </body>
 </html>
