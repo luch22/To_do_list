@@ -8,11 +8,15 @@ import { switchStates } from "./switchStates.js";
 if (localStorage.length == 0) {
   listToDo.forEach((e) => {
     window.localStorage.setItem(e.index, JSON.stringify(e));
+    window.localStorage.setItem("index", localStorage.length);
   });
 }
+
 let myListToDo = [];
 Object.keys(localStorage).forEach(function (key) {
-  myListToDo.push(JSON.parse(localStorage.getItem(key)));
+  if (key != "index") {
+    myListToDo.push(JSON.parse(localStorage.getItem(key)));
+  }
 });
 
 displayHTML(myListToDo);
