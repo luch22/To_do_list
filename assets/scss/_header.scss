@@ -1,8 +1,10 @@
 header {
-  margin: 50px 40px 0 40px;
+  margin: 40px;
   height: fit-content;
+  display: flex;
+  justify-content: center;
   form {
-    width: 50%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     :nth-child(1n) {

@@ -1,10 +1,12 @@
 header {
-  margin: 50px 40px 0 40px;
+  margin: 40px;
   height: -moz-fit-content;
   height: fit-content;
+  display: flex;
+  justify-content: center;
 }
 header form {
-  width: 50%;
+  width: 75%;
   display: flex;
   flex-direction: column;
 }
@@ -13,6 +15,8 @@ header form :nth-child(1n) {
 }
 
 section.toDo {
+  scale: 0.8;
+  font-size: 1em;
   margin: 10px;
   border: black 3px solid;
   padding: 5px;
@@ -21,8 +25,15 @@ section.toDo {
   align-content: space-around;
   align-items: baseline;
   justify-items: center;
-  grid-template-areas: "ti ti ti ti" "txt txt txt txt" "del ch da da";
+  grid-template-areas: "ti ti ti ti" "txt txt txt txt" "del del ch ch " "da da da da";
   min-height: 260px;
+}
+section.toDo:hover {
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  scale: 1;
+  transition: all 500ms;
 }
 section.toDo .toDo__title {
   grid-area: ti;
@@ -35,9 +46,20 @@ section.toDo .toDo__date {
   grid-area: da;
 }
 section.toDo #accomplish {
+  height: 20px;
+  width: 20px;
   grid-area: ch;
 }
+section.toDo #accomplish:checked {
+  background-color: red;
+}
 section.toDo .toDo__delete {
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  color: #fff;
+  font-size: xx-small;
   background-color: red;
   height: 50px;
   width: 50px;
@@ -63,6 +85,8 @@ section.toDo .toDo__delete {
 body {
   max-width: 1440px;
   margin: auto;
+  background: radial-gradient(at top left, rgba(162, 46, 180, 0.5) 10%, rgba(2, 57, 208, 0.5) 25%, rgba(156, 68, 178, 0.5) 50%, rgba(215, 166, 8, 0.5) 70%, rgba(2, 57, 208, 0.5) 90%);
+  background-color: rgb(255, 255, 255);
 }
 body .div__Principale_ToDo {
   display: flex;
