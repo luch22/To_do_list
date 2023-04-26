@@ -1,0 +1,71 @@
+header {
+  margin: 50px 40px 0 40px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+header div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+header div :nth-child(1n) {
+  margin: 10px;
+}
+
+section.toDo {
+  margin: 10px;
+  border: black 3px solid;
+  padding: 5px;
+  width: 28%;
+  display: grid;
+  align-content: space-around;
+  align-items: baseline;
+  justify-items: center;
+  grid-template-areas: "ti ti ti ti" "txt txt txt txt" "del ch da da";
+  min-height: 260px;
+}
+section.toDo .toDo__title {
+  grid-area: ti;
+  color: red;
+}
+section.toDo .toDo__text {
+  grid-area: txt;
+}
+section.toDo .toDo__date {
+  grid-area: da;
+}
+section.toDo #accomplish {
+  grid-area: ch;
+}
+section.toDo .toDo__delete {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  grid-area: del;
+}
+
+@media screen and (min-width: 1200px) {
+  section.toDo {
+    width: 22%;
+  }
+}
+@media screen and (max-width: 850px) {
+  section.toDo {
+    width: 42%;
+  }
+}
+@media screen and (max-width: 460px) {
+  section.toDo {
+    width: 96%;
+  }
+}
+body {
+  max-width: 1440px;
+  margin: auto;
+}
+body .div__Principale_ToDo {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}/*# sourceMappingURL=main.css.map */

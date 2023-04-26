@@ -1,0 +1,50 @@
+section.toDo {
+  margin: 10px;
+  border: black 3px solid;
+  padding: 5px;
+  width: 28%;
+  display: grid;
+  align-content: space-around;
+  align-items: baseline;
+  justify-items: center;
+  grid-template-areas:
+    "ti ti ti ti"
+    "txt txt txt txt"
+    "del ch da da";
+  min-height: 260px;
+  .toDo__title {
+    grid-area: ti;
+    color: red;
+  }
+  .toDo__text {
+    grid-area: txt;
+  }
+  .toDo__date {
+    grid-area: da;
+  }
+  #accomplish {
+    grid-area: ch;
+  }
+  .toDo__delete {
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    grid-area: del;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.toDo {
+    width: 22%;
+  }
+}
+@media screen and (max-width: 850px) {
+  section.toDo {
+    width: 42%;
+  }
+}
+@media screen and (max-width: 460px) {
+  section.toDo {
+    width: 96%;
+  }
+}
