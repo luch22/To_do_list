@@ -1,9 +1,11 @@
-export function addToDo(myListToDo, index) {
+export function addToDo(myListToDo) {
   let myToDo = myListToDo;
-  document.getElementById("toDo__add").addEventListener("click", () => {
+  document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    let n = localStorage.length;
     if (document.getElementById("titre").value != "") {
       myToDo.push({
-        index: index + 1,
+        index: ++n,
         title: document.getElementById("titre").value,
         date: document.getElementById("date").value,
         text: document.getElementById("toDo").value,
@@ -16,8 +18,6 @@ export function addToDo(myListToDo, index) {
         window.localStorage.setItem(e.index, JSON.stringify(e));
       });
     }
-    location.reload();
   });
-
   return myToDo;
 }

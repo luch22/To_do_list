@@ -10,14 +10,12 @@ if (localStorage.length == 0) {
     window.localStorage.setItem(e.index, JSON.stringify(e));
   });
 }
-
 let myListToDo = [];
 Object.keys(localStorage).forEach(function (key) {
   myListToDo.push(JSON.parse(localStorage.getItem(key)));
 });
 
-myListToDo = addToDo(myListToDo, myListToDo.length);
-
 displayHTML(myListToDo);
+addToDo(myListToDo);
 delToDo(myListToDo);
-switchStates();
+switchStates(myListToDo);
