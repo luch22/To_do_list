@@ -1,8 +1,8 @@
 export function addToDo(myListToDo) {
   let myToDo = myListToDo;
   document.querySelector("form").addEventListener("submit", (e) => {
-    e.preventDefault();
-    let n = localStorage.length;
+    // e.preventDefault();
+    let n = myListToDo.length;
     if (document.getElementById("titre").value != "") {
       myToDo.push({
         index: ++n,
@@ -12,7 +12,6 @@ export function addToDo(myListToDo) {
         accomplished: false,
         active: true,
       });
-      console.log(localStorage);
       localStorage.clear();
       myToDo.forEach((e) => {
         window.localStorage.setItem(e.index, JSON.stringify(e));
