@@ -1,28 +1,23 @@
-import { listToDo } from "./listToDo.js";
-import { displayHTML } from "./displayHTML.js";
-
-export let myListToDo = [];
-
-listToDo.forEach((e) => {
-  window.localStorage.setItem(e.index, JSON.stringify(e));
-});
-
-Object.keys(localStorage).forEach(function (key) {
-  myListToDo.push(JSON.parse(localStorage.getItem(key)));
-});
-let index = localStorage.length + 1;
-localStorage.clear();
-
-document.getElementById("toDo__add").addEventListener("click", () => {
-  myListToDo.push({
-    index: index,
-    title: document.getElementById("titre").value,
-    date: document.getElementById("date").value,
-    text: document.getElementById("toDo").value,
-    accomplished: false,
-    active: true,
+export function addToDo(myListToDo, index) {
+  let myToDo = myListToDo;
+  document.getElementById("toDo__add").addEventListener("click", () => {
+    if (document.getElementById("titre").value != "") {
+      myToDo.push({
+        index: index + 1,
+        title: document.getElementById("titre").value,
+        date: document.getElementById("date").value,
+        text: document.getElementById("toDo").value,
+        accomplished: false,
+        active: true,
+      });
+      console.log(localStorage);
+      localStorage.clear();
+      myToDo.forEach((e) => {
+        window.localStorage.setItem(e.index, JSON.stringify(e));
+      });
+    }
+    location.reload();
   });
-  document.querySelector(".div__Principale_ToDo").remove();  
-  displayHTML(myListToDo);
-  
-});
+
+  return myToDo;
+}

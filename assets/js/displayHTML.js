@@ -15,6 +15,7 @@ export function displayHTML(listToDo) {
       let checkBox = document.createElement("input");
       checkBox.type = "checkbox";
       checkBox.id = "accomplish";
+      checkBox.name = "checkbox";
       checkBox.checked = toDo.accomplished;
       let deleteToDo = document.createElement("div");
       deleteToDo.classList = "toDo__delete";
