@@ -1,17 +1,18 @@
+import { displayHTML } from "./displayHTML.js";
+import { updateLocalStorage } from "./saveDataStorage.js";
+
 export function delToDo(listToDo) {
   document.querySelectorAll(".toDo__delete").forEach((element) => {
     element.addEventListener("click", (e) => {
+      console.log(e.target.parentElement.parentElement.dataset.id);
       listToDo.forEach((myToDo) => {
-        if (myToDo.title == e.target.parentElement.firstChild.textContent) {
+        if (myToDo.index == e.target.parentElement.parentElement.dataset.id) {
+          console.log(myToDo);
+
           listToDo.splice(listToDo.indexOf(myToDo), 1);
-          let n = localStorage.getItem("index");
-          localStorage.clear();
-          listToDo.forEach((e) => {
-            window.localStorage.setItem(e.index, JSON.stringify(e));
-            window.localStorage.setItem("index", n);
-          });
+          updateLocalStorage(listToDo);
+          displayHTML(listToDo);
         }
-        location.reload();
       });
     });
   });

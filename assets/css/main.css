@@ -45,26 +45,37 @@ section.toDo .toDo__text {
 section.toDo .toDo__date {
   grid-area: da;
 }
-section.toDo #accomplish {
-  height: 20px;
-  width: 20px;
-  grid-area: ch;
-}
-section.toDo #accomplish:checked {
-  background-color: red;
-}
-section.toDo .toDo__delete {
-  cursor: pointer;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 50px;
-  color: #fff;
-  font-size: xx-small;
-  background-color: red;
+section.toDo .container_toDo__delete {
   height: 50px;
   width: 50px;
-  border-radius: 30px;
   grid-area: del;
+}
+section.toDo .container_toDo__delete .toDo__delete {
+  display: none;
+  cursor: pointer;
+  background-color: red;
+  border-radius: 30px;
+  height: 50px;
+  width: 50px;
+}
+section.toDo input#accomplish {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  color: #000;
+  border-radius: 4px;
+  height: 40px;
+  width: 80px;
+  grid-area: ch;
+}
+section.toDo input#accomplish:checked {
+  background-color: aqua;
+  color: blue;
+}
+section.toDo input#accomplish:checked + .container_toDo__delete .toDo__delete {
+  display: block;
 }
 
 @media screen and (min-width: 1200px) {
@@ -85,7 +96,7 @@ section.toDo .toDo__delete {
 body {
   max-width: 1440px;
   margin: auto;
-  background: radial-gradient(at top left, rgba(162, 46, 180, 0.5) 10%, rgba(2, 57, 208, 0.5) 25%, rgba(156, 68, 178, 0.5) 50%, rgba(215, 166, 8, 0.5) 70%, rgba(2, 57, 208, 0.5) 90%);
+  background: radial-gradient(at top left, rgba(162, 46, 180, 0.5) 10%, rgba(2, 57, 208, 0.5) 25%, rgba(156, 68, 178, 0.5) 50%, rgba(215, 166, 8, 0.5) 70%, rgba(2, 57, 208, 0.5) 90%) fixed;
   background-color: rgb(255, 255, 255);
 }
 body .div__Principale_ToDo {

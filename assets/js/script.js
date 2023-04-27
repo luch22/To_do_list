@@ -21,5 +21,4 @@ Object.keys(localStorage).forEach(function (key) {
 
 displayHTML(myListToDo);
 addToDo(myListToDo);
-delToDo(myListToDo);
-switchStates(myListToDo);
+// switchStates(myListToDo);

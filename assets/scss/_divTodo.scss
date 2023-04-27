@@ -2,13 +2,14 @@ body {
   max-width: 1440px;
   margin: auto;
   background: radial-gradient(
-    at top left,
-    rgba(162, 46, 180, 0.5) 10%,
-    rgba(2, 57, 208, 0.5) 25%,
-    rgba(156, 68, 178, 0.5) 50%,
-    rgba(215, 166, 8, 0.5) 70%,
-    rgba(2, 57, 208, 0.5) 90%
-  );
+      at top left,
+      rgba(162, 46, 180, 0.5) 10%,
+      rgba(2, 57, 208, 0.5) 25%,
+      rgba(156, 68, 178, 0.5) 50%,
+      rgba(215, 166, 8, 0.5) 70%,
+      rgba(2, 57, 208, 0.5) 90%
+    )
+    fixed;
   background-color: rgb(255, 255, 255);
   // background-color: rgb(32, 32, 32);
 
