@@ -1,8 +1,6 @@
 import { displayHTML } from "./displayHTML.js";
 import { addToDo } from "./addToDo.js";
 import { listToDo } from "./listToDo.js";
-import { delToDo } from "./delToDo.js";
-import { switchStates } from "./switchStates.js";
 
 // localStorage.clear();
 if (localStorage.length == 0) {

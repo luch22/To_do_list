@@ -33,10 +33,10 @@ export function displayHTML(listToDo) {
         console.log(e.target.parentElement.parentElement.dataset.id);
         if (e.target.parentElement.parentElement.dataset.id == toDo.index) {
           listToDo.splice(listToDo.indexOf(toDo), 1);
-          updateLocalStorage();
+          updateLocalStorage(listToDo);
+          displayHTML(listToDo);
         }
       });
-
       sectionToDo.append(checkBox);
       sectionToDo.append(deleteToDo);
       divParentToDo.append(sectionToDo);
