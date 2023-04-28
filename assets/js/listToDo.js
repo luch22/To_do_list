@@ -27,7 +27,7 @@ export const listToDo = [
   {
     index: 4,
     title: "Titre 4",
-    date: new Date(2023, 9, 14).slice(0, 10).replaceAll("/", "-"),
+    date: new Date(2023, 9, 14).toISOString().slice(0, 10).replaceAll("/", "-"),
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus justo tortor, a euismod tellus rhoncus  rutrum.",
     accomplished: false,
     active: true,
