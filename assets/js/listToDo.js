@@ -27,13 +27,7 @@ export const listToDo = [
   {
     index: 4,
     title: "Titre 4",
-    date: new Intl.DateTimeFormat("fr-FR", {
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-    })
-      .format(new Date(2023, 9, 14))
-      .replaceAll("/", "-"),
+    date: new Date(2023, 9, 14).slice(0, 10).replaceAll("/", "-"),
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus justo tortor, a euismod tellus rhoncus  rutrum.",
     accomplished: false,
     active: true,
